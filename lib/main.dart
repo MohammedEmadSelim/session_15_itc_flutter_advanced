@@ -93,17 +93,18 @@ class _Test2State extends State<Test2> {
               child: ListView.builder(
                 padding: EdgeInsets.symmetric(horizontal: 24, vertical: 31),
                 itemCount: names.length,
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                  child: Text(
-                    "● ${names[index]}",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.indigo,
+                itemBuilder: (context, index) =>
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      child: Text(
+                        "● ${names[index]}",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.indigo,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
               ),
             ),
           ],
@@ -130,7 +131,10 @@ class _Test2State extends State<Test2> {
           //   setState(() {});
           // });
 
+          setState(() {
+            names.add("Sama Yahia");
 
+          });
         },
         child: Text(
           "+",
