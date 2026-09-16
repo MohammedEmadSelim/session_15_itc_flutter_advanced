@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Test2(title: 'ephemeral state'),
+      home: const EphemeralState(title: 'ephemeral state'),
     );
   }
 }
@@ -38,9 +38,13 @@ class MyApp extends StatelessWidget {
 /// imperative UI -==> as Native Swift do
 /// Declarative UI ==> as Flutter DO
 
-// How flutter handle state
-
-//provider
+    // How Flutter Handles State
+    // │
+    // ├── Ephemeral State
+    // │   └── State that belongs to a single widget
+    // │
+    // └── Provider - BLoC - GetX - RiverBod
+    // └── State that can be shared between multiple widgets
 
 //immutable  => غير قابل للتغير
 class Test extends StatelessWidget {
@@ -58,16 +62,16 @@ class Test extends StatelessWidget {
 
 ///       ephemeral state ===> حالة سريعة الزوال
 //immutable  => غير قابل للتغير
-class Test2 extends StatefulWidget {
-  const Test2({super.key, required this.title});
+class EphemeralState extends StatefulWidget {
+  const EphemeralState({super.key, required this.title});
 
   final String title;
 
   @override
-  State<Test2> createState() => _Test2State();
+  State<EphemeralState> createState() => _EphemeralStateState();
 }
 
-class _Test2State extends State<Test2> {
+class _EphemeralStateState extends State<EphemeralState> {
   List<String> names = ["Ahmed Hany", "Mena Adel"];
   TextEditingController name = TextEditingController();
 
