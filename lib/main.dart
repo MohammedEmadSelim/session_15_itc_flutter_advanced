@@ -195,7 +195,7 @@ class _AppStateByBottomNavBarState extends State<AppStateByBottomNavBar> {
           ),
         ),
       ),
-      body: IndexedStack(children: screen, index: index),
+      body: screen[index],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.indigo,
         currentIndex: index,
