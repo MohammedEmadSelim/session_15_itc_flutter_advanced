@@ -217,7 +217,7 @@ class _AppStateByBottomNavBarState extends State<AppStateByBottomNavBar> {
           Provider.of<UserInfoController>(
             context,
             listen: false,
-          ).updateUserName("Arwa");
+          ).updateUserName(": Arwa");
         },
         child: Text(
           "+",
